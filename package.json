@@ -1,0 +1,43 @@
+{
+  "name": "whitelist",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sl": "yarn prettier --write contracts/**/*.sol",
+    "sh": "solhint -f table contracts/**/*.sol",
+    "t": "yarn hardhat test",
+    "c": "yarn hardhat compile",
+    "size": "yarn hardhat size-contracts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/divaprotocol/whitelist.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/divaprotocol/whitelist/issues"
+  },
+  "homepage": "https://github.com/divaprotocol/whitelist#readme",
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "2.0.2",
+    "@nomiclabs/hardhat-etherscan": "^3.0.3",
+    "@nomiclabs/hardhat-waffle": "2.0.1",
+    "chai": "4.3.4",
+    "ethereum-waffle": "3.4.0",
+    "ethers": "5.4.5",
+    "hardhat": "2.7.0",
+    "hardhat-contract-sizer": "2.1.1",
+    "prettier": "2.5.1",
+    "prettier-plugin-solidity": "1.0.0-beta.19",
+    "solhint": "3.3.6",
+    "solhint-plugin-prettier": "^0.0.5",
+    "xdeployer": "^1.1.6"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "4.4.0",
+    "dotenv": "10.0.0",
+    "hardhat-gas-reporter": "1.0.4"
+  }
+}
