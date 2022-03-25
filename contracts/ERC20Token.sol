@@ -3,9 +3,17 @@ pragma solidity 0.8.13;
 
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
+import "./interfaces/IERC20Token.sol";
 
-contract ERC20Token is Ownable, ERC20 {
+/**
+ * @notice An ERC20 token that can be minted to a given recipient 
+ * by the owner of the contract (`msg.sender` by default)
+ * 
+ */
+contract ERC20Token is Ownable, ERC20, IERC20Token {
+    
     uint8 private _decimals;
+    
     constructor(
         string memory name_, 
         string memory symbol_,
@@ -17,7 +25,7 @@ contract ERC20Token is Ownable, ERC20 {
     function mint(
         address _recipient, 
         uint256 _amount
-    ) external onlyOwner {
+    ) external override onlyOwner {
         _mint(_recipient, _amount);
     }
 

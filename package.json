@@ -8,7 +8,9 @@
     "sh": "solhint -f table contracts/**/*.sol",
     "t": "yarn hardhat test",
     "c": "yarn hardhat compile",
-    "size": "yarn hardhat size-contracts"
+    "size": "yarn hardhat size-contracts",
+    "x": "yarn hardhat xdeploy",
+    "verify-faucet": "npx hardhat verify --constructor-args deployERC20TokenFaucet-args.js 0xf4c5641d5576f5Ef3343EdDb79439A39Ac08499C"
   },
   "repository": {
     "type": "git",
@@ -27,7 +29,7 @@
     "chai": "4.3.4",
     "ethereum-waffle": "3.4.0",
     "ethers": "5.4.5",
-    "hardhat": "2.7.0",
+    "hardhat": "2.9.2",
     "hardhat-contract-sizer": "2.1.1",
     "prettier": "2.5.1",
     "prettier-plugin-solidity": "1.0.0-beta.19",

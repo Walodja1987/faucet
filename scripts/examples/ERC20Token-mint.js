@@ -6,12 +6,12 @@ async function main() {
 
     let mintSupply = "1000" // scaling to corresponding number of decimals is done below in the code
     const recipient = "0x9AdEFeb576dcF52F5220709c1B267d89d5208D78"    // faucet address
-    const erc20TokenAddress = "0x09Db8E5056cDde7d094b44354dB4e5e9a1fdEbE8"
+    const erc20TokenAddress = "0x916e81F6A2879e0Cb3662b02B740331c6C0D801a"
 
     const [acc1, acc2, acc3] = await ethers.getSigners();
     const caller = acc1;
 
-    // Check that the ERC20 token address is fixed
+    // Check that the ERC20 token address is provided
     if (erc20TokenAddress === "" || erc20TokenAddress === undefined) {
       console.log("Please specify a token address")
     }
