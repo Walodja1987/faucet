@@ -80,9 +80,12 @@ const MNEMONIC = process.env.MNEMONIC
       enabled: true,
   },
   xdeploy: {
-    contract: "ERC20Token",
-    constructorArgsPath: "./scripts/deploy/deployERC20Token-args.js",
-    salt: "WAGMIERC20Test1",  // update everytime you do a new deployment
+    // contract: "ERC20Token",
+    // constructorArgsPath: "./scripts/deploy/deployERC20Token-args.js",
+    // salt: "WAGMIERC20Test1",  // update everytime you do a new deployment
+    contract: "ERC20TokenFaucet",
+    constructorArgsPath: "./scripts/deploy/deployERC20TokenFaucet-args.js",
+    salt: "WAGMIERC20FaucetTest2",  // update everytime you do a new deployment
     signer: PRIVATE_KEY,
     networks: [
       "ropsten", 
