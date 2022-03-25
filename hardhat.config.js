@@ -77,7 +77,7 @@ const MNEMONIC = process.env.MNEMONIC
       enabled: true,
   },
   xdeploy: {
-    contract: "ERC20Faucet",
+    contract: "ERC20Token",
     constructorArgsPath: "./scripts/deploy/deploy-args.js",
     salt: "WAGMIFaucetTest1",  // update everytime you do a new deployment
     signer: PRIVATE_KEY,
@@ -93,7 +93,7 @@ const MNEMONIC = process.env.MNEMONIC
       process.env.ALCHEMY_URL_KOVAN, 
       process.env.ALCHEMY_URL_POLYGON_MUMBAI
     ],
-    gasLimit: 4.0 * 10 ** 6,
+    gasLimit: 4 * 10 ** 6,
   },
   etherscan: {
     apiKey: {
