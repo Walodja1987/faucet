@@ -1,12 +1,12 @@
 // Script to deploy an ERC20 token for testing purposes
 
 const hre = require("hardhat");
-const args = require("./deployERC20-args.js");
+const args = require("./deployERC20Token-args.js");
 
 async function main() {
 
     // Set constructor args
-    const name = args[0]   // "TUSDC"
+    const name = args[0]        // "TUSDC"
     const symbol = args[1]      // "TUSDC"
     const decimals = args[2]    // 18
 
