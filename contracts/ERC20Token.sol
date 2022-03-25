@@ -17,9 +17,12 @@ contract ERC20Token is Ownable, ERC20, IERC20Token {
     constructor(
         string memory name_, 
         string memory symbol_,
-        uint8 decimals_
+        uint8 decimals_,
+        address _contractOwner
     ) payable ERC20(name_, symbol_) {
         _decimals = decimals_;
+        require(_contractOwner != address(0), "ERC20Token: owner is 0x0");
+        transferOwnership(_contractOwner);
     }
 
     function mint(

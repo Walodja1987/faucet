@@ -35,7 +35,10 @@ const MNEMONIC = process.env.MNEMONIC
     },
     ropsten: {
       url: process.env.ALCHEMY_URL_ROPSTEN,
-      accounts: [`0x${PRIVATE_KEY}`], // example with private key; type: array
+      accounts: {
+        mnemonic: MNEMONIC, // example with mnemonic; type: object
+      },
+      // accounts: [`0x${PRIVATE_KEY}`], // example with private key; type: array
     },
     rinkeby: {
       url: process.env.ALCHEMY_URL_RINKEBY,
@@ -77,8 +80,8 @@ const MNEMONIC = process.env.MNEMONIC
       enabled: true,
   },
   xdeploy: {
-    contract: "ERC20TokenFaucet",
-    constructorArgsPath: "./scripts/deploy/deployERC20TokenFaucet-args.js",
+    contract: "ERC20Token",
+    constructorArgsPath: "./scripts/deploy/deployERC20Token-args.js",
     salt: "WAGMIERC20Test1",  // update everytime you do a new deployment
     signer: PRIVATE_KEY,
     networks: [

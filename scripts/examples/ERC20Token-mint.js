@@ -6,7 +6,7 @@ async function main() {
 
     let mintSupply = "1000" // scaling to corresponding number of decimals is done below in the code
     const recipient = "0x9AdEFeb576dcF52F5220709c1B267d89d5208D78"    // faucet address
-    const erc20TokenAddress = "0x916e81F6A2879e0Cb3662b02B740331c6C0D801a"
+    const erc20TokenAddress = "0x4bf010f1b9beDA5450a8dD702ED602A104ff65EE"
 
     const [acc1, acc2, acc3] = await ethers.getSigners();
     const caller = acc1;

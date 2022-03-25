@@ -9,6 +9,7 @@ async function main() {
     const name = args[0]        // "TUSDC"
     const symbol = args[1]      // "TUSDC"
     const decimals = args[2]    // 18
+    const owner = "0x9AdEFeb576dcF52F5220709c1B267d89d5208D78"
 
     // Set deployer account
     const [acc1, acc2, acc3] = await ethers.getSigners()
@@ -16,12 +17,12 @@ async function main() {
 
     // Deploy ERC20Token contract
     const ERC20 = await hre.ethers.getContractFactory("ERC20Token");
-    const erc20 = await ERC20.connect(deployer).deploy(name, symbol, decimals);
+    const erc20 = await ERC20.connect(deployer).deploy(name, symbol, decimals, owner);
 
     await erc20.deployed();
 
     // Print token information
-    console.log("Deployer address :" + deployer.address)
+    console.log("Deployer address: " + deployer.address)
     console.log("ERC20 token deployed to: ", erc20.address);
     console.log("Name: " + await erc20.name())
     console.log("Symbol: " + await erc20.symbol())
